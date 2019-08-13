@@ -10,7 +10,7 @@ namespace Noted.Editor
         private const string DefaultNotesPath = "PatchNotes";
         private static string _notesPath;
 
-        [MenuItem("Window/Patch Notes")]
+        [MenuItem("Window/Noted/Noted Editor")]
         public static void Initialize()
         {
             var notesWindow = GetWindow<PatchNotesWindow>();
