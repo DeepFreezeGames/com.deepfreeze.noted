@@ -20,7 +20,7 @@ namespace Noted.Editor
 
         private void OnEnable()
         {
-            _patchNotes = PatchNoteSettings.PatchNotes;
+            _patchNotes = PatchNoteSpawner.PatchNotes;
             _patchNoteEditor = UnityEditor.Editor.CreateEditor(_patchNotes);
         }
 

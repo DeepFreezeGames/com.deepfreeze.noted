@@ -1,9 +1,10 @@
-﻿using UnityEditor;
+﻿using Noted.Runtime;
+using UnityEditor;
 using UnityEngine;
 
-namespace Noted.Runtime
+namespace Noted.Editor
 {
-    public static class PatchNoteSettings
+    public static class PatchNoteSpawner
     {
         private const string DefaultPatchNotesPath = "PatchNotes";
 
