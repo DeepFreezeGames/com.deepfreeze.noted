@@ -1,4 +1,5 @@
 ﻿using System;
+using Noted.Runtime;
 using UnityEditor;
 using UnityEngine;
 
@@ -6,25 +7,26 @@ namespace Noted.Editor
 {
     public class PatchNotesWindow : EditorWindow
     {
-        private const string EditorKeyNotesPath = "Noted_NotesPath";
-        private const string DefaultNotesPath = "PatchNotes";
-        private static string _notesPath;
+        private PatchNotes _patchNotes;
+        private UnityEditor.Editor _patchNoteEditor;
 
         [MenuItem("Window/Noted/Noted Editor")]
         public static void Initialize()
         {
             var notesWindow = GetWindow<PatchNotesWindow>();
             notesWindow.titleContent = new GUIContent("Patch Notes");
-            if (string.IsNullOrWhiteSpace(_notesPath))
-            {
-                _notesPath = EditorPrefs.GetString(EditorKeyNotesPath, DefaultNotesPath);
-            }
             notesWindow.Show();
+        }
+
+        private void OnEnable()
+        {
+            _patchNotes = PatchNoteSettings.PatchNotes;
+            _patchNoteEditor = UnityEditor.Editor.CreateEditor(_patchNotes);
         }
 
         private void OnGUI()
         {
-
+            _patchNoteEditor.OnInspectorGUI();
         }
     }
 }

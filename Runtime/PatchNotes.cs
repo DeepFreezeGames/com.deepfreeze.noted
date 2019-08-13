@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace Noted.Runtime
 {
-    [CreateAssetMenu]
     public class PatchNotes : ScriptableObject
     {
         [SerializeField] private List<PatchNote> _patchNotes = new List<PatchNote>();
