@@ -13,7 +13,7 @@
         "editor"
     ],
     "dependencies": {
-        "EditorGUIExtensions": "https://github.com/LiamAtDeepFreeze/EditorGUIExtensions.git"
+        "com.deepfreeze.editorguiextensions": "https://github.com/LiamAtDeepFreeze/EditorGUIExtensions.git"
     },
     "category": "Unity"
 }
