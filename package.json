@@ -1,7 +1,7 @@
 {
     "name": "com.deepfreeze.noted",
     "displayName": "Noted",
-    "registry": "https://github.com/LiamAtDeepFreeze/EditorGUIExtensions.git",
+    "registry": "https://github.com/LiamAtDeepFreeze/Noted.git",
     "version": "0.0.1",
     "unity": "2018.1",
     "description": "A UPM (Unity Package Manager) package for managing and tracking patch notes in your game.",
